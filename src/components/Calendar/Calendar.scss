@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex:5;
+  flex-direction: column;
+  font-size: 1vw;
+  border-radius: 16px;
+  padding: 2vw;
+  box-shadow: 4px 4px 40px lightgray;
+  .header {
+    width: 100%;
+    flex:1;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    font-size:3em;
+    font-weight: bold;
+    .left{
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        opacity: 0.5;
+        transform: translateX(-0.25em);
+      }
+    }
+    .right{
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover{
+        opacity: 0.5;
+        transform: translateX(0.25em);
+      }
+    }
+  }
+  .line{
+    width:100%;
+    height:0.1em;
+    margin:1em;
+    background-color: black;
+  }
+  .body {
+    width: 100%;
+    flex:5;
+    display: flex;
+    justify-content: space-between;
+    .monthContainer{
+        width: 46%;
+        display: flex;
+        flex-direction: column;
+        .days{
+            display: flex;
+            flex:1;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            margin-left:0.75em;
+            width: 92%;
+            font-size: 1.5em;
+        }
+        .dates{
+            width: 100%;
+            flex:5;
+            margin-top: 0.5em;
+            display: grid;
+            grid-gap: 0.25em;
+            grid-template-columns: repeat(7, 1fr);
+            .date{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5em;
+                border: 1px solid #aaaaaa;
+                transition: 0.3s;
+                opacity: 0.5;
+            }
+            .selectedDate{
+              color:white;
+              background-color: black;
+            }
+            .isValidateDate{
+              cursor: pointer;
+              opacity: 1;
+            }
+        }
+    }
+  }
+}
