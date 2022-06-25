@@ -121,7 +121,7 @@ function Calendar({ selectedDate, handleSelect }) {
   }, [handleSelect]);
 
   return (
-    <div className="container">
+    <div className="calendarContainer">
       <div className="header">
         <BsChevronLeft className="left" onClick={onClickPreviousBtn} />
         <span style={{ flex: "1" }}>{formateDate(firstDate)}</span>

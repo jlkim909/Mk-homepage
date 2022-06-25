@@ -4,10 +4,11 @@ import styled from "@emotion/styled";
 import { BsArrowRight } from "react-icons/bs";
 const Container = styled.div`
   width: 100%;
+  height: 100%;
+  padding-left: 10vw;
   display: flex;
   align-items: center;
-  opacity: 0;
-  transition: 1s ease;
+  justify-content: center;
 `;
 const formateDate = (dateData) => {
   let month = dateData?.month + 1;
@@ -20,17 +21,14 @@ const formateDate = (dateData) => {
 };
 
 function Reservation() {
-  const ref = useRef();
   const [selectedDate, setSelecetedDate] = useState();
-  useEffect(() => {
-    ref.current.style.opacity = 1;
-  }, []);
+
   return (
-    <Container ref={ref}>
+    <Container>
       <Calendar selectedDate={selectedDate} handleSelect={setSelecetedDate} />
       <div className="flex flex-col items-center" style={{ flex: "2" }}>
-        <BsArrowRight style={{ fontSize: "3rem" }} />
-        <span style={{ fontSize: "1rem" }}>{`${formateDate(
+        <BsArrowRight style={{ fontSize: "3vw" }} />
+        <span style={{ fontSize: "1vw" }}>{`${formateDate(
           selectedDate
         )} 예약`}</span>
       </div>
