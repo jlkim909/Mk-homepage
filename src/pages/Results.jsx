@@ -27,6 +27,7 @@ function Results() {
       <ResultBox />
       <ResultBox />
       <ResultBox />
+      <div>edit</div>
     </Container>
   );
 }
