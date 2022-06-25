@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Calendar from "../components/Calendar/Calendar";
 import styled from "@emotion/styled";
 import { BsArrowRight } from "react-icons/bs";
@@ -26,7 +26,7 @@ function Reservation() {
   return (
     <Container>
       <Calendar selectedDate={selectedDate} handleSelect={setSelecetedDate} />
-      <div className="flex flex-col items-center" style={{ flex: "2" }}>
+      <div className="flex flex-col items-center" style={{ flex: "1" }}>
         <BsArrowRight style={{ fontSize: "3vw" }} />
         <span style={{ fontSize: "1vw" }}>{`${formateDate(
           selectedDate
